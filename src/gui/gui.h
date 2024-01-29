@@ -2596,7 +2596,7 @@ class FurnaceGUI {
   void stop();
   void endIntroTune();
 
-  void previewNote(int refChan, int note, bool autoNote=false);
+  void previewNote(int refChan, int note, int vol=-1, bool autoNote=false);
   void stopPreviewNote(SDL_Scancode scancode, bool autoNote=false);
 
   void keyDown(SDL_Event& ev);

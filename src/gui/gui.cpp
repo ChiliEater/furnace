@@ -1152,10 +1152,10 @@ void FurnaceGUI::stop() {
   }
 }
 
-void FurnaceGUI::previewNote(int refChan, int note, bool autoNote) {
+void FurnaceGUI::previewNote(int refChan, int note, int vol, bool autoNote) {
   e->setMidiBaseChan(refChan);
-  e->synchronized([this,note]() {
-    if (!e->autoNoteOn(-1,curIns,note)) failedNoteOn=true;
+  e->synchronized([this,note,vol]() {
+    if (!e->autoNoteOn(-1,curIns,note,vol)) failedNoteOn=true;
   });
 }
 
